@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Grid, Typography, Paper } from '@mui/material';
+import Link from '@mui/material/Link';
 
 const sponsors = [
     { name: 'Alpina Personalconsulting', logo: 'alpina.png' },
@@ -17,9 +18,21 @@ export default function Sponsors() {
         <Typography 
           variant="h4" 
           component="h2" 
-          sx={{ marginBottom: '30px', color: 'primary.main', fontSize: '2.5rem', fontWeight: 'bold'}}
-        >
+          sx={{ marginBottom: '30px', color: 'primary.main', fontSize: '2.5rem', fontWeight: 'bold'}}>
           Hiermit möchte ich meinen Sponsoren danken!
+        </Typography>
+        <Typography 
+            variant="h4" 
+            component="h2" 
+            sx={{ marginBottom: '30px', fontSize: '2rem', color: 'secondary.main' }}>
+            Mit dem Code Elina30 sparst du bei 
+            <Link 
+                href="https://www.laprimafit.com" // Replace with the actual URL
+                color="secondary"
+                sx={{ mx: '5px' }}>
+                LaPrimafit
+            </Link>
+            30%
         </Typography>
         <Grid container spacing={2} justifyContent="center" alignItems={'center'}>
           {sponsors.map((sponsor, index) => (

@@ -39,6 +39,8 @@ const cards = [
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 3,
+      autoplay: true,
+      autoplaySpeed: 5000,
       responsive: [
         {
           breakpoint: 960,
@@ -60,7 +62,7 @@ const cards = [
     };
   
     return (
-      <Box sx={{ padding: '20px', margin: '0 auto', maxWidth: '60%', mb: 4, marginBottom: '10vh' }}> {/* Added bottom margin to the Box */}
+      <Box sx={{ padding: '20px', margin: '0 auto', maxWidth: '70%', mb: 4, marginBottom: '10vh' }}> {/* Added bottom margin to the Box */}
         <Slider {...settings}>
           {cards.map((card, index) => (
             <Box key={index} sx={{ padding: '0 10px' }}>
